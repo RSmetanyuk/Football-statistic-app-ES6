@@ -1,4 +1,4 @@
-var app = angular
+let app = angular
   .module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize"]);
 
 app.config(function($routeProvider){

@@ -1,5 +1,5 @@
 app.factory('DataFactory', function($http){
-  var Data = {};
+  let Data = {};
   
   Data.getApi = function(database, callback) {      
     if (Data[database] === undefined) {
@@ -10,7 +10,7 @@ app.factory('DataFactory', function($http){
           Data[database] = response.data.result;  
         
           if (database === "teams") {
-            for (var i = 0; i < Data.teams.length; i++) {
+            for (let i = 0; i < Data.teams.length; i++) {
               Data.teams[i].emblemaUrl = (Data.teams[i].emblema === "" ? "/img/no_logo.png" :
                 "https://footballbet.com.ua/teams/embl/".concat(Data.teams[i].emblema));
             }
