@@ -1,0 +1,24 @@
+<div ng-show="showContent" class="container">
+  <img src="{{Data.teams[teamNumber].emblemaUrl}}"/>
+  <p ng-if="Data.teams[teamNumber].name">
+    <strong>Назва команди: </strong>{{Data.teams[teamNumber].name}}</p>
+  <p ng-if="Data.teams[teamNumber].second_name">
+    <strong>Друга назва: </strong>{{Data.teams[teamNumber].second_name}}</p>
+  <p ng-if="Data.teams[teamNumber].city">
+    <strong>Місто: </strong>{{Data.teams[teamNumber].city}}</p>
+  <p ng-if="Data.teams[teamNumber].foundation_year">
+    <strong>Рік заснування: </strong>{{Data.teams[teamNumber].foundation_year}}</p>
+  <p ng-if="Data.teams[teamNumber].coach">
+    <strong>Тренер: </strong>{{Data.teams[teamNumber].coach}}</p>
+  <p ng-if="Data.teams[teamNumber].president">
+    <strong>Президент: </strong>{{Data.teams[teamNumber].president}}</p>
+  <p ng-if="Data.teams[teamNumber].home_stadion">
+    <strong>Домашній стадіон: </strong>{{Data.teams[teamNumber].home_stadion}}</p>
+  <p ng-if="Data.teams[teamNumber].id_championship">
+    <strong>ID чемпіонату: </strong>{{Data.teams[teamNumber].id_championship}}, 
+    <a href="#!championships/{{Data.teams[teamNumber].id_championship}}">Деталі чемпіонату</a></p>
+  <p ng-if="Data.teams[teamNumber].off_site"><strong>Веб сторінка: </strong>
+    <a href="{{teams[teamNumber].off_site}}">{{Data.teams[teamNumber].off_site}}</a></p>
+  <p ng-if="Data.teams[teamNumber].title"><strong>Трофеї: </strong></p>
+  <p ng-if="Data.teams[teamNumber].title" ng-bind-html="Data.teams[teamNumber].title"></p>
+</div>

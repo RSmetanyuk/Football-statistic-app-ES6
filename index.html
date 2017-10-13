@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.0.2/angular-sanitize.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+  <script src="js/libs/dirPagination.js"></script>  
+  <script src="js/app.js"></script>
+  <script src="js/header.controller.js"></script>
+  <script src="js/data.factory.js"></script> 
+  <script src="js/championships.controler.js"></script>
+  <script src="js/championship.controler.js"></script>
+  <script src="js/teams.controler.js"></script>
+  <script src="js/team.controler.js"></script>
+  <script src="js/matches.controler.js"></script>
+  <script src="js/match.controler.js"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+</head>
+
+<body ng-app="main">
+
+  <div class="navbar navbar-default navbar-fixed-top" ng-controller="headerController">
+    <div class="container">
+    <ul class="nav navbar-nav">
+      <a href="#"><img src="img/football.png" alt="Soccer ball"></a>
+      <li ng-class="{ active: isActive('/championships')}"><a href="#!championships">Championships</a></li>
+      <li ng-class="{ active: isActive('/teams')}"><a href="#!teams">Teams</a></li>
+      <li ng-class="{ active: isActive('/matches')}"><a href="#!matches">Matches</a></li>
+      <li ng-class="{ active: isActive('/about')}"><a href="#!about">About</a></li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="container" id="main-content">
+    <div ng-view></div>
+  </div>
+
+</body>
+</html>

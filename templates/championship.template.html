@@ -1,0 +1,7 @@
+<div ng-show="showContent" class="container left">
+  <img src="https://footballbet.com.ua/table/embl/{{Data.championships[idChampionship - 1].title}}.jpg" />
+  <p>ID чемпіонату: {{idChampionship}}</p>
+  <p>Чемпіонат: {{Data.championships[idChampionship - 1].name}}</p>
+  <p ng-if="Data.championships[idChampionship - 1].sename">
+    Назва чемпіонату: {{Data.championships[idChampionship - 1].sename}}</p>
+</div>

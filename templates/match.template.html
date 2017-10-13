@@ -1,0 +1,25 @@
+<table ng-show="showContent">
+  <head>
+    <tr>
+      <th>Date</th>
+      <th>Championship</th>
+      <th>Match</th>
+    </tr>
+  </head>
+  <tbody>
+    <tr>
+      <td>{{Data.matches[idMatch].date}}   </td>
+      <td><a href="#!championships/{{Data.matches[idMatch].id_championship}}">
+        {{Data.matches[idMatch].title}}  </a></td>
+      <td>
+        <a href="#!teams/{{Data.matches[idMatch].idFirstTeam}}">
+          {{Data.matches[idMatch].firstTeam}} 
+        </a>
+        {{Data.matches[idMatch].firstTeamGoal}}:{{Data.matches[idMatch].secondTeamGoal}} 
+        <a href="#!teams/{{Data.matches[idMatch].idSecondTeam}}">
+          {{Data.matches[idMatch].secondTeam}}
+        </a>
+      </td>           
+    </tr>
+  </tbody>
+</table>

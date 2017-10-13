@@ -1,0 +1,35 @@
+<table ng-show="showContent" class="table-championships">
+  <head>
+    <tr>
+      <th>
+        <span ng-hide="searchActive">
+          Championships
+          <a href="" ng-click="searchActive = true"><span class="glyphicon glyphicon-search"></span></a>
+        </span>         
+        <span ng-show="searchActive">
+          <div class="btn-group search-form">
+            <input type="text" ng-model="search" id="search" placeholder="Search" class="form-control">
+            <span id="search-clear" class="glyphicon glyphicon-remove-circle"
+              ng-click="searchActive = false; search =''"></span>
+          </div>
+        </span>
+      </th>
+    </tr>
+  </head>
+  <tbody>
+    <tr dir-paginate="championship in Data.championships|filter: {name: search}|itemsPerPage:10">
+      <td>
+        <img src="https://footballbet.com.ua/table/embl/{{championship.image}}" height="35" width="35" />
+        <a href="#!championships/{{championship.id_championship}}">  {{championship.name}}</span></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div ng-show="showContent" class="centered">
+  <dir-pagination-controls
+    max-size="5"
+    direction-links="true"
+    boundary-links="faulse" >
+  </dir-pagination-controls> 
+</div>
