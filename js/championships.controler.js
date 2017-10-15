@@ -3,6 +3,8 @@ app.controller('championshipsControler', function($scope, DataFactory) {
   $scope.showContent = false;
   $scope.searchActive = false;
   $scope.Data.getApi("championships")
-    .then(() => $scope.showContent = true
-  );
+    .then(() => {
+      $scope.showContent = true;
+      $scope.$apply();
+    });
 });

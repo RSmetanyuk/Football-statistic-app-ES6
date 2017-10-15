@@ -3,10 +3,8 @@ app.controller('matchesControler', function($scope, DataFactory) {
   $scope.showContent = false;
   $scope.searchActive = false;
   $scope.Data.getApi("matches").then(() => {
-    for (let i = 0; i < $scope.Data.matches.length; i++) {
-      $scope.Data.matches[i].teamPair = 
-      $scope.Data.matches[i].firstTeam.concat(" - ", $scope.Data.matches[i].secondTeam);    
-    }
+    for (let match of $scope.Data.matches) match.teamPair =
+      `${match.firstTeam} - ${match.secondTeam}`;
     $scope.showContent = true;
     $scope.$apply();
   });

@@ -1,4 +1,4 @@
-<div class="container">
+<div ng-show="showContent" class="container">
   <img src="{{Data.teams[teamNumber].emblemaUrl}}"/>
   <p ng-if="Data.teams[teamNumber].name">
     <strong>Назва команди: </strong>{{Data.teams[teamNumber].name}}</p>
@@ -6,7 +6,7 @@
     <strong>Друга назва: </strong>{{Data.teams[teamNumber].second_name}}</p>
   <p ng-if="Data.teams[teamNumber].city">
     <strong>Місто: </strong>{{Data.teams[teamNumber].city}}</p>
-  <p ng-if="Data.teams[teamNumber].foundation_year">
+  <p ng-if="Data.teams[teamNumber].foundation_year > 0">
     <strong>Рік заснування: </strong>{{Data.teams[teamNumber].foundation_year}}</p>
   <p ng-if="Data.teams[teamNumber].coach">
     <strong>Тренер: </strong>{{Data.teams[teamNumber].coach}}</p>
