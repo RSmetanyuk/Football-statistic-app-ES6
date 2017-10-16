@@ -1,4 +1,4 @@
-let app = angular
+angular
   .module('main', [
     "ngRoute",
     "angularUtils.directives.dirPagination",
