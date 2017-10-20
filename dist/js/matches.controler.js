@@ -12,6 +12,7 @@ angular.module('main').controller('matchesControler', function ($scope, DataFact
     try {
       for (var _iterator = $scope.Data.matches[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var match = _step.value;
+
         match.teamPair = match.firstTeam + ' - ' + match.secondTeam;
       }
     } catch (err) {

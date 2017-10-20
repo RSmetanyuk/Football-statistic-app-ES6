@@ -4,7 +4,9 @@ angular.module('main').controller('headerController', function ($scope, $locatio
   $scope.isActive = function (viewLocation) {
     var result = true;
     for (var i = 0; i < viewLocation.length; i++) {
-      if (viewLocation[i] !== $location.path()[i]) result = false;
+      if (viewLocation[i] !== $location.path()[i]) {
+        result = false;
+      }
     }
     return result;
   };

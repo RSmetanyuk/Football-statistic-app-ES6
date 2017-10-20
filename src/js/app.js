@@ -1,6 +1,2 @@
 angular
-  .module('main', [
-    "ngRoute",
-    "angularUtils.directives.dirPagination",
-    "ngSanitize"
-  ]);
+  .module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize"]);

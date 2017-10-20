@@ -15,7 +15,7 @@ angular
               if (database === "teams") {
                 for (let i in Data.teams) {
                   Data.teams[i].emblemaUrl = (Data.teams[i].emblema === "" ? "/img/no_logo.png" :
-                    "https://footballbet.com.ua/teams/embl/".concat(Data.teams[i].emblema));
+                    `https://footballbet.com.ua/teams/embl/$(Data.teams[i].emblema)`;
                 }
               }  
 
@@ -25,9 +25,9 @@ angular
         } else {
           resolve();
         }
-      });
+      }
       return promise;
-    };
+    }
 
     return Data;
   });
